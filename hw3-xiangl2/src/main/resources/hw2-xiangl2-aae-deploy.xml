@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+   
+<analysisEngineDeploymentDescription 
+  xmlns="http://uima.apache.org/resourceSpecifier">
+  
+  <name>hw2-xiangl2-aae-deploy</name>
+  <description>Deploy hw2-xiangl2-aae in local machine. </description>
+  
+  <deployment protocol="jms" provider="activemq">
+    <service>
+      <inputQueue endpoint="hw2-xiangl2-aae-queen" brokerURL="${defaultBrokerURL}"/>
+      <topDescriptor>
+       <import name="hw2-xiangl2-aae"/> 
+      </topDescriptor>
+    </service>
+  </deployment>
+
+</analysisEngineDeploymentDescription>
